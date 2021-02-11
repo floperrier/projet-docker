@@ -16,11 +16,10 @@ CREATE TABLE `users` (
   `mdp` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-
 INSERT INTO `users` (`prenom`, `nom`, `email`, `mdp`) VALUES
-('William',"Jambon","william@gmail.com","fsdlkjh"),
-('Marc',"Mark","marc@gmail.com","dfsjhsf"),
-('John',"Hallidon","john@gmail.com","fsdjlkfds");
+("William","Jambon","william@gmail.com",SHA2("bonjour",256)),
+("Marc","Mark","marc@gmail.com",SHA2("salut",256)),
+("John","Hallidon","john@gmail.com",SHA2("hola",256));
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
